@@ -46,9 +46,11 @@ class FieldsController extends AdminController
      * @param  FieldTypeCollection                        $fieldTypes
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function create(FieldFormBuilder $form, FieldTypeCollection $fieldTypes)
+    public function create($fieldType, FieldFormBuilder $form, FieldTypeCollection $fieldTypes)
     {
-        $form->setNamespace('variables')->setFieldType($fieldTypes->get($_GET['field_type']));
+        if (!$fieldType) return back();
+
+        $form->setNamespace('variables')->setFieldType($fieldTypes->get($fieldType));
 
         return $form->render();
     }
