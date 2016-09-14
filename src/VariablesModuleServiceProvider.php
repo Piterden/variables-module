@@ -38,7 +38,7 @@ class VariablesModuleServiceProvider extends AddonServiceProvider
         'admin/variables/groups/assignments/{group}/edit/{id}' => 'Anomaly\VariablesModule\Http\Controller\Admin\AssignmentsController@edit',
         'admin/variables/fields'                               => 'Anomaly\VariablesModule\Http\Controller\Admin\FieldsController@index',
         'admin/variables/fields/choose'                        => 'Anomaly\VariablesModule\Http\Controller\Admin\FieldsController@choose',
-        'admin/variables/fields/create'                        => 'Anomaly\VariablesModule\Http\Controller\Admin\FieldsController@create',
+        'admin/variables/fields/create/{field_type}' 		   => 'Anomaly\VariablesModule\Http\Controller\Admin\FieldsController@create',
         'admin/variables/fields/edit/{id}'                     => 'Anomaly\VariablesModule\Http\Controller\Admin\FieldsController@edit',
     ];
 
